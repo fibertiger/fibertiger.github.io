@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>fibertiger</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./styles/mobile.css" type="text/css" media="screen and (max-width: 800px)">
+    <script src="./scripts/menu.js"></script>
+</head>
+<body>
+<div id="parent">
+    <header>
+            <h1>Hello World</h1>
+            <div class="nav-right pc-only">
+                <ul class="nav" id="menu-pc" role="nav">
+                    <!-- make a <ul> list where every link is a <li>, with space between links defined by css -->
+                    <li><a href="/index.html">home</a></li>
+                    <li><a href="/blog.html">blog</a></li>
+                    <li><a href="/mywork.html">my work</a></li>
+                    <li><a href="/about.html">about</a></li>
+                    <li><a href="/hire.html">resume</a></li>
+                </ul>
+                    <img id="toggle-nav" onclick="toggleNav()" src="/assets/menu_white_36dp.svg">
+            </div>
+            <div class="mobile-only">
+                <img id="toggle-nav" onclick="toggleNav()" src="/assets/menu_white_36dp.svg">
+                <img id="toggle-nav" onclick="toggleNav()" src="/assets/menu_white_36dp.svg"> 
+            </div>
+    </header>
+    <nav class="nav" id="nav-mobile">
+        <p><a href="/index.html">home</a></p>
+        <p><a href="/blog.html">blog</a></p>
+        <p><a href="/about.html">about</a></p>
+        <p><a href="/hire.html">resume</a></p></p>
+    </nav>
+    <main>
+        <p>Hello again</p>
+    </main>
+</div>
+</body>

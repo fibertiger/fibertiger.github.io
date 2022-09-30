@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(37, 37, 37);
+}
+
+#parent {
+  color: rgb(245, 245, 245);
+  width: calc(100vw - 20%);
+  margin: 0 auto 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-style: dashed;
+  border-bottom-width: 5px;
+  border-bottom-color: rgb(194, 124, 19);
+}
+header h1 {
+  color: rgb(194, 124, 19);
+}
+
+.nav {
+  font-weight: 700;
+}
+.nav a {
+  color: rgb(245, 245, 245);
+}
+.nav a:visited {
+  color: rgb(194, 124, 19);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-right ul {
+  list-style-type: none;
+  margin-right: 1vw;
+}
+.nav-right ul li {
+  margin-right: 1vw;
+  display: inline-block;
+}
+
+#nav-mobile {
+  display: none;
+}
+
+.mobile-only {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
