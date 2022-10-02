@@ -1,9 +1,30 @@
+/* thank you Francesco Improta https://dev.to/zetareticoli/dark-mode-with-sass-and-css-variables-4f9b */
+:root {
+  --bg: rgb(37, 37, 37);
+  --text: rgb(245, 245, 245);
+}
+
+.light {
+  --bg: rgb(253, 253, 253);
+  --text: rgb(37, 37, 37);
+}
+
+:root {
+  --bg: rgb(37, 37, 37);
+  --text: rgb(245, 245, 245);
+}
+
+.light {
+  --bg: rgb(253, 253, 253);
+  --text: rgb(37, 37, 37);
+}
+
 body {
-  background-color: rgb(37, 37, 37);
+  background-color: var(--bg);
 }
 
 #parent {
-  color: rgb(245, 245, 245);
+  color: var(--text);
   width: calc(100vw - 20%);
   margin: 0 auto 0 auto;
 }
@@ -14,26 +35,32 @@ header {
   justify-content: space-between;
   border-bottom-style: dashed;
   border-bottom-width: 5px;
-  border-bottom-color: rgb(194, 124, 19);
+  border-bottom-color: rgb(167, 103, 7);
 }
 header h1 {
-  color: rgb(194, 124, 19);
+  color: rgb(167, 103, 7);
 }
 
 .nav {
   font-weight: 700;
 }
 .nav a {
-  color: rgb(245, 245, 245);
+  color: var(--text);
 }
 .nav a:visited {
-  color: rgb(194, 124, 19);
+  color: rgb(167, 103, 7);
 }
 
-#nav-pc {
-  list-style-type: none;
+.nav-right {
+  display: flex;
+  align-items: center;
 }
-#nav-pc li {
+.nav-right ul {
+  list-style-type: none;
+  margin-right: 1vw;
+}
+.nav-right ul li {
+  margin-right: 1vw;
   display: inline-block;
 }
 

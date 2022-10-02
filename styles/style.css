@@ -1,9 +1,34 @@
+/* thank you Francesco Improta https://dev.to/zetareticoli/dark-mode-with-sass-and-css-variables-4f9b */
+:root {
+  --bg: rgb(37, 37, 37);
+  --text: rgb(245, 245, 245);
+}
+
+.light {
+  --bg: rgb(253, 253, 253);
+  --text: rgb(37, 37, 37);
+}
+
+:root {
+  --bg: rgb(37, 37, 37);
+  --text: rgb(245, 245, 245);
+  --theme-icon: url("/assets/header/dark_mode_white_36dp.svg");
+  --nav-icon: url("/assets/header/menu_white_36dp.svg");
+}
+
+.light {
+  --bg: rgb(253, 253, 253);
+  --text: rgb(37, 37, 37);
+  --theme-icon: url("/assets/header/light_mode_black_36dp.svg");
+  --nav-icon: url("/assets/header/menu_black_36dp.svg");
+}
+
 body {
-  background-color: rgb(37, 37, 37);
+  background-color: var(--bg);
 }
 
 #parent {
-  color: rgb(245, 245, 245);
+  color: var(--text);
   width: calc(100vw - 20%);
   margin: 0 auto 0 auto;
 }
@@ -14,20 +39,38 @@ header {
   justify-content: space-between;
   border-bottom-style: dashed;
   border-bottom-width: 5px;
-  border-bottom-color: rgb(194, 124, 19);
+  border-bottom-color: rgb(167, 103, 7);
 }
 header h1 {
-  color: rgb(194, 124, 19);
+  color: rgb(167, 103, 7);
+}
+
+#toggle-theme {
+  content: var(--theme-icon);
+}
+
+#toggle-nav {
+  content: var(--nav-icon);
+}
+
+.nav-left a {
+  text-decoration: none;
+}
+.nav-left a:active {
+  text-decoration: none;
+}
+.nav-left a:visited {
+  text-decoration: none;
 }
 
 .nav {
   font-weight: 700;
 }
 .nav a {
-  color: rgb(245, 245, 245);
+  color: var(--text);
 }
 .nav a:visited {
-  color: rgb(194, 124, 19);
+  color: rgb(167, 103, 7);
 }
 
 .nav-right {

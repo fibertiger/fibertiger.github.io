@@ -1,10 +1,23 @@
 @import colors
+@import themes
+
+:root
+    --bg: #{$bg-dark}
+    --text: #{$text-dark}
+    --theme-icon: url("/assets/header/dark_mode_white_36dp.svg")
+    --nav-icon: url("/assets/header/menu_white_36dp.svg")
+
+.light
+    --bg: #{$bg-light}
+    --text: #{$text-light}
+    --theme-icon: url("/assets/header/light_mode_black_36dp.svg")
+    --nav-icon: url("/assets/header/menu_black_36dp.svg")
 
 body
-    background-color: $bg
+    background-color: var(--bg)
 
 #parent
-    color: $text
+    color: var(--text)
     width: calc(100vw - 20%)
     margin: 0 auto 0 auto
 
@@ -18,10 +31,23 @@ header
     h1
         color: $accents
 
+#toggle-theme
+    content: var(--theme-icon)
+#toggle-nav
+    content: var(--nav-icon)
+
+.nav-left
+    a
+        text-decoration: none
+    a:active
+        text-decoration: none
+    a:visited
+        text-decoration: none
+
 .nav
     font-weight: 700
     a
-        color: $text
+        color: var(--text)
     a:visited
         color: $accents
 
