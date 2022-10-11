@@ -20,7 +20,7 @@ body
     background-color: var(--bg)
     color: var(--text)
     /* main flex container */
-    width: calc(100vw - 20%)
+    width: calc(100vw - 40%)
     margin: 0 auto 0 auto
     display: flex
     flex-direction: column
@@ -37,7 +37,7 @@ header
     border-bottom-style: dashed
     border-bottom-width: 5px
     border-bottom-color: $accents
-    h1
+    h2
         color: $accents
 
 /* header icons */
@@ -47,19 +47,14 @@ header
     content: var(--nav-icon)
 
 .nav-left
+    display: flex
+    align-items: center
     a
         text-decoration: none
     a:active
         text-decoration: none
     a:visited
         text-decoration: none
-
-.header-links
-    font-weight: 700
-    a
-        color: var(--text)
-    a:visited
-        color: $accents
 
 .nav-right
     display: flex
@@ -70,6 +65,13 @@ header
         li
             margin-right: 1vw
             display: inline-block
+
+.header-links
+    font-weight: 700
+    a
+        color: var(--text)
+    a:visited
+        color: $accents
 
 #nav-mobile
     display: none
@@ -95,3 +97,5 @@ footer
         li
             margin-right: 1vw
             display: inline-block
+    /* text */
+    font-size: 12px

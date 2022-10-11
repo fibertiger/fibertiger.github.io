@@ -31,7 +31,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   /* main flex container */
-  width: calc(100vw - 20%);
+  width: calc(100vw - 40%);
   margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ header {
   border-bottom-width: 5px;
   border-bottom-color: rgb(167, 103, 7);
 }
-header h1 {
+header h2 {
   color: rgb(167, 103, 7);
 }
 
@@ -64,6 +64,10 @@ header h1 {
   content: var(--nav-icon);
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+}
 .nav-left a {
   text-decoration: none;
 }
@@ -72,16 +76,6 @@ header h1 {
 }
 .nav-left a:visited {
   text-decoration: none;
-}
-
-.header-links {
-  font-weight: 700;
-}
-.header-links a {
-  color: var(--text);
-}
-.header-links a:visited {
-  color: rgb(167, 103, 7);
 }
 
 .nav-right {
@@ -95,6 +89,16 @@ header h1 {
 .nav-right ul li {
   margin-right: 1vw;
   display: inline-block;
+}
+
+.header-links {
+  font-weight: 700;
+}
+.header-links a {
+  color: var(--text);
+}
+.header-links a:visited {
+  color: rgb(167, 103, 7);
 }
 
 #nav-mobile {
@@ -116,6 +120,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* text */
+  font-size: 12px;
 }
 footer ul {
   list-style-type: none;
