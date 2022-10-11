@@ -12,27 +12,41 @@
 :root {
   --bg: rgb(37, 37, 37);
   --text: rgb(245, 245, 245);
+  --theme-icon: url("/assets/header/dark_mode_white_36dp.svg");
+  --nav-icon: url("/assets/header/menu_white_36dp.svg");
 }
 
 .light {
   --bg: rgb(253, 253, 253);
   --text: rgb(37, 37, 37);
+  --theme-icon: url("/assets/header/light_mode_black_36dp.svg");
+  --nav-icon: url("/assets/header/menu_black_36dp.svg");
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--bg);
-}
-
-#parent {
   color: var(--text);
+  /* main flex container */
   width: calc(100vw - 20%);
   margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* decorative separator */
   border-bottom-style: dashed;
   border-bottom-width: 5px;
   border-bottom-color: rgb(167, 103, 7);
@@ -41,13 +55,32 @@ header h1 {
   color: rgb(167, 103, 7);
 }
 
-.nav {
+/* header icons */
+#toggle-theme {
+  content: var(--theme-icon);
+}
+
+#toggle-nav {
+  content: var(--nav-icon);
+}
+
+.nav-left a {
+  text-decoration: none;
+}
+.nav-left a:active {
+  text-decoration: none;
+}
+.nav-left a:visited {
+  text-decoration: none;
+}
+
+.header-links {
   font-weight: 700;
 }
-.nav a {
+.header-links a {
   color: var(--text);
 }
-.nav a:visited {
+.header-links a:visited {
   color: rgb(167, 103, 7);
 }
 
@@ -72,14 +105,31 @@ header h1 {
   display: none;
 }
 
-#parent {
-  width: 100%;
+footer {
+  border-top-style: dashed;
+  border-top-width: 5px;
+  border-top-color: rgb(167, 103, 7);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer ul {
+  list-style-type: none;
+  margin-right: 1vw;
+}
+footer ul li {
+  margin-right: 1vw;
+  display: inline-block;
+}
+
+body {
+  width: calc(100vw - 2%);
 }
 
 header {
   width: 100%;
   display: flex;
-  flex: 1;
 }
 
 .pc-only {
@@ -91,6 +141,8 @@ header {
 }
 
 #nav-mobile {
+  list-style: none;
+  line-height: 5vh;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 5px 7px 5px 7px;
   border-radius: 0 0 5px 5px;

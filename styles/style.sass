@@ -13,24 +13,34 @@
     --theme-icon: url("/assets/header/light_mode_black_36dp.svg")
     --nav-icon: url("/assets/header/menu_black_36dp.svg")
 
+*
+    box-sizing: border-box
+
 body
     background-color: var(--bg)
-
-#parent
     color: var(--text)
+    /* main flex container */
     width: calc(100vw - 20%)
     margin: 0 auto 0 auto
+    display: flex
+    flex-direction: column
+    height: 100vh
+
+main
+    flex: 1 0 auto
 
 header
     display: flex
     align-items: center
     justify-content: space-between
+    /* decorative separator */
     border-bottom-style: dashed
     border-bottom-width: 5px
     border-bottom-color: $accents
     h1
         color: $accents
 
+/* header icons */
 #toggle-theme
     content: var(--theme-icon)
 #toggle-nav
@@ -44,7 +54,7 @@ header
     a:visited
         text-decoration: none
 
-.nav
+.header-links
     font-weight: 700
     a
         color: var(--text)
@@ -66,3 +76,22 @@ header
 
 .mobile-only
     display: none
+
+
+footer
+    /* decorative border */
+    border-top-style: dashed
+    border-top-width: 5px
+    border-top-color: $accents
+    /* flex positioning in relation to main */
+    flex-shrink: 0
+    /* its own flex container for the ul + li children */
+    display: flex
+    align-items: center
+    justify-content: center
+    ul
+        list-style-type: none
+        margin-right: 1vw
+        li
+            margin-right: 1vw
+            display: inline-block

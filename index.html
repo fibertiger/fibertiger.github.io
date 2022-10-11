@@ -8,30 +8,36 @@
     <script src="./scripts/nav.js"></script>
 </head>
 <body>
-<div id="parent">
     <header>
         <div class="nav-left"><a href="/"><h1>Hello World</h1></a></div>
-            <div class="nav-right pc-only">
-                <ul class="nav" id="menu-pc" role="nav">
-                    <li><a href="/blog.html">blog</a></li>
-                    <li><a href="/projects.html">projects</a></li>
-                    <li><a href="/about.html">about</a></li>
-                    <li><a href="/hire.html">resume</a></li>
-                </ul>
-                <img id="toggle-theme" onclick="toggleTheme()">
-            </div>
-            <div class="mobile-only">
-                <img id="toggle-nav" onclick="toggleNav()">
-                <img id="toggle-theme" onclick="toggleTheme()"> 
-            </div>
+        <div class="nav-right pc-only">
+            <ul class="header-links">
+                <li><a href="/blog.html">blog</a></li>
+                <li><a href="/projects.html">projects</a></li>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="/hire.html">resume</a></li>
+            </ul>
+            <img id="toggle-theme" onclick="toggleTheme()">
+        </div>
+        <div class="mobile-only">
+            <img id="toggle-nav" onclick="toggleNav()">
+            <img id="toggle-theme" onclick="toggleTheme()"> 
+        </div>
     </header>
-    <nav class="nav" id="nav-mobile">
-        <p><a href="/blog.html">blog</a></p>
-        <p><a href="/about.html">about</a></p>
-        <p><a href="/hire.html">resume</a></p></p>
-    </nav>
+    <ul class="nav mobile-only header-links" id="nav-mobile">
+            <li><a href="/blog.html">blog</a></li>
+            <li><a href="/projects.html">projects</a></li>
+            <li><a href="/about.html">about</a></li>
+            <li><a href="/hire.html">resume</a></li>
+    </ul>
     <main>
         <p>Hello again</p>
     </main>
-</div>
+    <footer>
+        <ul>
+            <li>hello</li>
+            <li>hello again</li>
+            <li>hello third time</li>
+        </ul>
+    </footer>
 </body>
